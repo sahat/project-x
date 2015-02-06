@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9pv-A4-QxB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First View Controller-->
@@ -10,60 +9,16 @@
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Tesla" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                        <viewControllerLayoutGuide type="top" id="amN-WL-16q"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Q6-ad-Ajh"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                    <view key="view" contentMode="scaleToFill" id="Z7r-MP-bjH" customClass="GMSMapView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="smg-rR-jC3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAL-sY-GlJ">
-                                <rect key="frame" x="7" y="26" width="30" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="dKK-aM-nOx"/>
-                                </constraints>
-                                <state key="normal" title="D">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9d5-50-AWh">
-                                <rect key="frame" x="290" y="26" width="30" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="aM5-09-rbu"/>
-                                </constraints>
-                                <state key="normal" title="O">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5r-ci-tkQ">
-                                <rect key="frame" x="45" y="26" width="237" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="smg-rR-jC3" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="3ma-08-kQb"/>
-                            <constraint firstItem="smg-rR-jC3" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="43e-Zo-0tC"/>
-                            <constraint firstItem="smg-rR-jC3" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="CVH-dX-jjU"/>
-                            <constraint firstItem="NAL-sY-GlJ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-9" id="GNb-ye-J6g"/>
-                            <constraint firstItem="NAL-sY-GlJ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="6" id="GvA-7E-R0Q"/>
-                            <constraint firstItem="NAL-sY-GlJ" firstAttribute="baseline" secondItem="9d5-50-AWh" secondAttribute="baseline" id="Mdd-bL-rgE"/>
-                            <constraint firstItem="s5r-ci-tkQ" firstAttribute="top" secondItem="NAL-sY-GlJ" secondAttribute="top" id="c4G-gW-rc4"/>
-                            <constraint firstItem="s5r-ci-tkQ" firstAttribute="leading" secondItem="NAL-sY-GlJ" secondAttribute="trailing" constant="8" symbolic="YES" id="ebw-Uh-qei"/>
-                            <constraint firstAttribute="trailing" secondItem="9d5-50-AWh" secondAttribute="trailing" id="jeT-jf-Qwk"/>
-                            <constraint firstItem="9d5-50-AWh" firstAttribute="trailing" secondItem="smg-rR-jC3" secondAttribute="trailing" id="nyB-6a-D6C"/>
-                            <constraint firstItem="9d5-50-AWh" firstAttribute="leading" secondItem="s5r-ci-tkQ" secondAttribute="trailing" constant="8" symbolic="YES" id="r7q-Db-HLx"/>
-                        </constraints>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="smg-rR-jC3" id="dba-Qb-SbT"/>
+                        <outlet property="mapView" destination="Z7r-MP-bjH" id="OfU-6l-oeF"/>
                         <outlet property="searchDisplayController" destination="DX9-yj-H5a" id="hya-GX-aae"/>
                     </connections>
                 </viewController>
