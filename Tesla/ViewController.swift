@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class FirstViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
