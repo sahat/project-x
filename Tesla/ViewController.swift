@@ -8,36 +8,69 @@
 
 import UIKit
 import MapKit
-import Alamofire
+import CoreLocation
 
-
-class FirstViewController: UIViewController, CLLocationManagerDelegate {
+class FirstViewController: UIViewController, MKMapViewDelegate {
     
-    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
+    
+    var route: MKRoute?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request(.GET, "http://httpbin.org/get", parameters: ["foo": "bar"])
-            .response { (request, response, data, error) in
-                println(request)
-                println(response)
-                println(error)
+        var p1 = MKPointAnnotation()
+        var p2 = MKPointAnnotation()
+        
+        p1.coordinate = CLLocationCoordinate2DMake(25.0305, 121.5360)
+        p1.title = "Taipei"
+        p1.subtitle = "Taiwan"
+        mapView.addAnnotation(p1)
+        
+        p2.coordinate = CLLocationCoordinate2DMake(24.9511, 121.2358)
+        p2.title = "Chungli"
+        p2.subtitle = "Taiwan"
+        mapView.addAnnotation(p2)
+        
+        mapView.delegate = self
+        
+        mapView.setRegion(MKCoordinateRegionMake(p2.coordinate, MKCoordinateSpanMake(0.7,0.7)), animated: true)
+        
+        var directionsRequest = MKDirectionsRequest()
+        
+        let markTaipei = MKPlacemark(coordinate: CLLocationCoordinate2DMake(p1.coordinate.latitude, p1.coordinate.longitude), addressDictionary: nil)
+        let markChungli = MKPlacemark(coordinate: CLLocationCoordinate2DMake(p2.coordinate.latitude, p2.coordinate.longitude), addressDictionary: nil)
+        
+        directionsRequest.setSource(MKMapItem(placemark: markChungli))
+        directionsRequest.setDestination(MKMapItem(placemark: markTaipei))
+        directionsRequest.transportType = MKDirectionsTransportType.Automobile
+        
+        var directions = MKDirections(request: directionsRequest)
+        directions.calculateDirectionsWithCompletionHandler { (response: MKDirectionsResponse!, error: NSError!) -> Void in
+            if error == nil {
+                self.route = response.routes[0] as? MKRoute
+                self.mapView.addOverlay(self.route?.polyline)
+            } else {
+                println("error")
+            }
         }
         
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+        var myLineRenderer = MKPolylineRenderer(polyline: route?.polyline)
+        myLineRenderer.strokeColor = UIColor(red: 0, green: 0, blue: 255, alpha: 0.6)
+        myLineRenderer.lineWidth = 5
+        return myLineRenderer
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .AuthorizedWhenInUse {
             locationManager.startUpdatingLocation()
             
-            mapView?.myLocationEnabled = true
-            mapView?.settings.myLocationButton = true
-            mapView?.settings.compassButton = true
+    
         }
     }
     
@@ -45,22 +78,12 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         if let location = locations.first as? CLLocation {
             locationManager.stopUpdatingLocation()
             
-            var camera = GMSCameraPosition(target: location.coordinate, zoom: 12, bearing: 0, viewingAngle: 0)
-            var mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
-
-            var marker = GMSMarker()
-            marker.position = camera.target
-            marker.snippet = "Hello World"
-            marker.appearAnimation = kGMSMarkerAnimationPop
-            marker.map = mapView
-            
-            self.view = mapView
+           
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

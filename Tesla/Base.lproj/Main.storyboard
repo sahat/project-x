@@ -17,11 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNM-Pi-8sh" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" red="0.41090152138157893" green="0.84536903782894612" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rnn-LY-cvK" colorLabel="IBBuiltInLabel-Green">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q3o-Pf-vnr">
+                                <rect key="frame" x="0.0" y="19" width="320" height="549"/>
+                            </mapView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnn-LY-cvK" colorLabel="IBBuiltInLabel-Green">
                                 <rect key="frame" x="0.0" y="19" width="320" height="47"/>
                                 <connections>
                                     <segue destination="tlU-ZC-VEB" kind="embed" id="oG5-PU-vmk"/>
@@ -30,14 +29,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="CNM-Pi-8sh" secondAttribute="trailing" id="PQo-Kz-6fB"/>
-                            <constraint firstItem="CNM-Pi-8sh" firstAttribute="centerX" secondItem="rnn-LY-cvK" secondAttribute="centerX" id="UCW-vs-wPQ"/>
-                            <constraint firstItem="CNM-Pi-8sh" firstAttribute="bottom" secondItem="BZq-OD-Lad" secondAttribute="top" id="Wel-cX-CBc"/>
-                            <constraint firstItem="CNM-Pi-8sh" firstAttribute="top" secondItem="Pqw-e0-IZt" secondAttribute="top" id="ieL-hx-vRr"/>
-                            <constraint firstItem="CNM-Pi-8sh" firstAttribute="leading" secondItem="Pqw-e0-IZt" secondAttribute="leading" id="jaO-kq-CD2"/>
+                            <constraint firstItem="BZq-OD-Lad" firstAttribute="top" secondItem="rnn-LY-cvK" secondAttribute="bottom" constant="502" id="59e-b2-sk2"/>
+                            <constraint firstItem="rnn-LY-cvK" firstAttribute="top" secondItem="Q3o-Pf-vnr" secondAttribute="top" id="JLr-9g-3tS"/>
+                            <constraint firstItem="rnn-LY-cvK" firstAttribute="leading" secondItem="Pqw-e0-IZt" secondAttribute="leading" id="U2N-iZ-WR8"/>
+                            <constraint firstItem="rnn-LY-cvK" firstAttribute="leading" secondItem="Q3o-Pf-vnr" secondAttribute="leading" id="bWE-Kf-NY1"/>
+                            <constraint firstItem="rnn-LY-cvK" firstAttribute="top" secondItem="Pqw-e0-IZt" secondAttribute="topMargin" constant="19" id="iZu-8F-OLs"/>
+                            <constraint firstItem="rnn-LY-cvK" firstAttribute="trailing" secondItem="Q3o-Pf-vnr" secondAttribute="trailing" id="kKa-nv-4zd"/>
+                            <constraint firstAttribute="trailing" secondItem="rnn-LY-cvK" secondAttribute="trailing" id="y8P-bx-1EL"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="Q3o-Pf-vnr" id="6Mx-2x-J5i"/>
                         <outlet property="searchDisplayController" destination="DX9-yj-H5a" id="hya-GX-aae"/>
                     </connections>
                 </viewController>

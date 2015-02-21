@@ -27,47 +27,10 @@
 		3F79B2831A8410E60025F928 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2821A8410E60025F928 /* OpenGLES.framework */; };
 		3F79B2851A8410EB0025F928 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2841A8410EB0025F928 /* QuartzCore.framework */; };
 		3F79B2871A8410F20025F928 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2861A8410F20025F928 /* SystemConfiguration.framework */; };
-		3FC2BB951A84744A004BB286 /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC2BB941A84744A004BB286 /* GoogleDataProvider.swift */; };
-		3FC2BB971A84748E004BB286 /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC2BB961A84748E004BB286 /* GooglePlace.swift */; };
 		3FC2BB9E1A84780E004BB286 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3FC2BB9D1A84780E004BB286 /* GoogleMaps.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3F3BFE101A8722A0000B95FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F3BFE091A8722A0000B95FE /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		3F3BFE121A8722A0000B95FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F3BFE091A8722A0000B95FE /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire OSX";
-		};
-		3F3BFE141A8722A0000B95FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F3BFE091A8722A0000B95FE /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		3F3BFE161A8722A0000B95FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F3BFE091A8722A0000B95FE /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire OSX Tests";
-		};
-		3F3BFE1A1A872343000B95FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F3BFE091A8722A0000B95FE /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 		3F58452A1A66253E00FEDBB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3F58450A1A66253E00FEDBB4 /* Project object */;
@@ -78,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F3BFE091A8722A0000B95FE /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		3F5845121A66253E00FEDBB4 /* Tesla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5845161A66253E00FEDBB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F5845171A66253E00FEDBB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,8 +65,6 @@
 		3F79B2821A8410E60025F928 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		3F79B2841A8410EB0025F928 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3F79B2861A8410F20025F928 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		3FC2BB941A84744A004BB286 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
-		3FC2BB961A84748E004BB286 /* GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
 		3FC2BB981A84752D004BB286 /* Tesla-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tesla-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FC2BB9D1A84780E004BB286 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,17 +101,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F3BFE0A1A8722A0000B95FE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3F3BFE111A8722A0000B95FE /* Alamofire.framework */,
-				3F3BFE131A8722A0000B95FE /* Alamofire.framework */,
-				3F3BFE151A8722A0000B95FE /* Alamofire iOS Tests.xctest */,
-				3F3BFE171A8722A0000B95FE /* Alamofire OSX Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		3F5845091A66253E00FEDBB4 = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +109,6 @@
 				3F58452C1A66253E00FEDBB4 /* TeslaTests */,
 				3F5845131A66253E00FEDBB4 /* Products */,
 				3FC2BB981A84752D004BB286 /* Tesla-Bridging-Header.h */,
-				3F3BFE091A8722A0000B95FE /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,8 +128,6 @@
 				3F5845191A66253E00FEDBB4 /* ViewController.swift */,
 				3F58451D1A66253E00FEDBB4 /* Main.storyboard */,
 				3F5845151A66253E00FEDBB4 /* Supporting Files */,
-				3FC2BB941A84744A004BB286 /* GoogleDataProvider.swift */,
-				3FC2BB961A84748E004BB286 /* GooglePlace.swift */,
 			);
 			path = Tesla;
 			sourceTree = "<group>";
@@ -249,7 +195,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3F3BFE1B1A872343000B95FE /* PBXTargetDependency */,
 			);
 			name = Tesla;
 			productName = Tesla;
@@ -318,12 +263,6 @@
 			mainGroup = 3F5845091A66253E00FEDBB4;
 			productRefGroup = 3F5845131A66253E00FEDBB4 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3F3BFE0A1A8722A0000B95FE /* Products */;
-					ProjectRef = 3F3BFE091A8722A0000B95FE /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				3F5845111A66253E00FEDBB4 /* Tesla */,
@@ -331,37 +270,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3F3BFE111A8722A0000B95FE /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 3F3BFE101A8722A0000B95FE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3F3BFE131A8722A0000B95FE /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 3F3BFE121A8722A0000B95FE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3F3BFE151A8722A0000B95FE /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = 3F3BFE141A8722A0000B95FE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3F3BFE171A8722A0000B95FE /* Alamofire OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire OSX Tests.xctest";
-			remoteRef = 3F3BFE161A8722A0000B95FE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3F5845101A66253E00FEDBB4 /* Resources */ = {
@@ -389,8 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FC2BB951A84744A004BB286 /* GoogleDataProvider.swift in Sources */,
-				3FC2BB971A84748E004BB286 /* GooglePlace.swift in Sources */,
 				3F5845181A66253E00FEDBB4 /* AppDelegate.swift in Sources */,
 				3F58451A1A66253E00FEDBB4 /* ViewController.swift in Sources */,
 			);
@@ -407,11 +313,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3F3BFE1B1A872343000B95FE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = 3F3BFE1A1A872343000B95FE /* PBXContainerItemProxy */;
-		};
 		3F58452B1A66253E00FEDBB4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3F5845111A66253E00FEDBB4 /* Tesla */;
