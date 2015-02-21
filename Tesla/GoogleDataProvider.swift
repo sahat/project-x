@@ -13,6 +13,7 @@ import CoreLocation
 class GoogleDataProvider {
     
     let apiKey = "AIzaSyDHGpZC_B67IOEmTqn7maaTUZY9ApcKuKw"
+    
     var photoCache = [String:UIImage]()
     var placesTask = NSURLSessionDataTask()
     var session: NSURLSession {
@@ -61,7 +62,9 @@ class GoogleDataProvider {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         session.dataTaskWithURL(NSURL(string: urlString)!) {data, response, error in
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            
             var encodedRoute: String?
+            
             if let json = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? [String:AnyObject] {
                 if let routes = json["routes"] as AnyObject? as? [AnyObject] {
                     if let route = routes.first as? [String : AnyObject] {
