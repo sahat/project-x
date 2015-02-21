@@ -7,40 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F05DEEA1A98667C00E17782 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F05DEE91A98667C00E17782 /* MapKit.framework */; };
+		3F05DEEC1A98689E00E17782 /* Storyboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F05DEEB1A98689E00E17782 /* Storyboard2.storyboard */; };
 		3F5845181A66253E00FEDBB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5845171A66253E00FEDBB4 /* AppDelegate.swift */; };
 		3F58451A1A66253E00FEDBB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5845191A66253E00FEDBB4 /* ViewController.swift */; };
 		3F58451F1A66253E00FEDBB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F58451D1A66253E00FEDBB4 /* Main.storyboard */; };
 		3F5845211A66253E00FEDBB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5845201A66253E00FEDBB4 /* Images.xcassets */; };
 		3F5845241A66253E00FEDBB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F5845221A66253E00FEDBB4 /* LaunchScreen.xib */; };
-		3F5845301A66253E00FEDBB4 /* TeslaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58452F1A66253E00FEDBB4 /* TeslaTests.swift */; };
-		3F79B26D1A840FE30025F928 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B26C1A840FE30025F928 /* GoogleMaps.framework */; };
-		3F79B26F1A84108E0025F928 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B26E1A84108E0025F928 /* AVFoundation.framework */; };
-		3F79B2711A8410A10025F928 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2701A8410A10025F928 /* AdSupport.framework */; };
-		3F79B2731A8410AB0025F928 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2721A8410AB0025F928 /* CoreData.framework */; };
-		3F79B2751A8410B10025F928 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2741A8410B10025F928 /* CoreLocation.framework */; };
-		3F79B2771A8410B60025F928 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2761A8410B60025F928 /* CoreText.framework */; };
-		3F79B2791A8410BC0025F928 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2781A8410BC0025F928 /* GLKit.framework */; };
-		3F79B27B1A8410C20025F928 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B27A1A8410C20025F928 /* ImageIO.framework */; };
-		3F79B27D1A8410CA0025F928 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B27C1A8410CA0025F928 /* libc++.dylib */; };
-		3F79B27F1A8410D80025F928 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B27E1A8410D80025F928 /* libicucore.dylib */; };
-		3F79B2811A8410DF0025F928 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2801A8410DF0025F928 /* libz.dylib */; };
-		3F79B2831A8410E60025F928 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2821A8410E60025F928 /* OpenGLES.framework */; };
-		3F79B2851A8410EB0025F928 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2841A8410EB0025F928 /* QuartzCore.framework */; };
-		3F79B2871A8410F20025F928 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F79B2861A8410F20025F928 /* SystemConfiguration.framework */; };
-		3FC2BB9E1A84780E004BB286 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3FC2BB9D1A84780E004BB286 /* GoogleMaps.bundle */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3F58452A1A66253E00FEDBB4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F58450A1A66253E00FEDBB4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3F5845111A66253E00FEDBB4;
-			remoteInfo = Tesla;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		3F05DEE91A98667C00E17782 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3F05DEEB1A98689E00E17782 /* Storyboard2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard2.storyboard; sourceTree = "<group>"; };
 		3F5845121A66253E00FEDBB4 /* Tesla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5845161A66253E00FEDBB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F5845171A66253E00FEDBB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,25 +26,6 @@
 		3F58451E1A66253E00FEDBB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F5845201A66253E00FEDBB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F5845231A66253E00FEDBB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3F5845291A66253E00FEDBB4 /* TeslaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F58452E1A66253E00FEDBB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F58452F1A66253E00FEDBB4 /* TeslaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaTests.swift; sourceTree = "<group>"; };
-		3F79B26C1A840FE30025F928 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		3F79B26E1A84108E0025F928 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		3F79B2701A8410A10025F928 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		3F79B2721A8410AB0025F928 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		3F79B2741A8410B10025F928 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3F79B2761A8410B60025F928 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		3F79B2781A8410BC0025F928 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		3F79B27A1A8410C20025F928 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		3F79B27C1A8410CA0025F928 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		3F79B27E1A8410D80025F928 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		3F79B2801A8410DF0025F928 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		3F79B2821A8410E60025F928 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		3F79B2841A8410EB0025F928 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		3F79B2861A8410F20025F928 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		3FC2BB981A84752D004BB286 /* Tesla-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tesla-Bridging-Header.h"; sourceTree = "<group>"; };
-		3FC2BB9D1A84780E004BB286 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,27 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F79B2871A8410F20025F928 /* SystemConfiguration.framework in Frameworks */,
-				3F79B2851A8410EB0025F928 /* QuartzCore.framework in Frameworks */,
-				3F79B2831A8410E60025F928 /* OpenGLES.framework in Frameworks */,
-				3F79B2811A8410DF0025F928 /* libz.dylib in Frameworks */,
-				3F79B27F1A8410D80025F928 /* libicucore.dylib in Frameworks */,
-				3F79B27D1A8410CA0025F928 /* libc++.dylib in Frameworks */,
-				3F79B27B1A8410C20025F928 /* ImageIO.framework in Frameworks */,
-				3F79B2791A8410BC0025F928 /* GLKit.framework in Frameworks */,
-				3F79B2771A8410B60025F928 /* CoreText.framework in Frameworks */,
-				3F79B2751A8410B10025F928 /* CoreLocation.framework in Frameworks */,
-				3F79B2731A8410AB0025F928 /* CoreData.framework in Frameworks */,
-				3F79B2711A8410A10025F928 /* AdSupport.framework in Frameworks */,
-				3F79B26F1A84108E0025F928 /* AVFoundation.framework in Frameworks */,
-				3F79B26D1A840FE30025F928 /* GoogleMaps.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F5845261A66253E00FEDBB4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3F05DEEA1A98667C00E17782 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,11 +43,9 @@
 		3F5845091A66253E00FEDBB4 = {
 			isa = PBXGroup;
 			children = (
-				3F79B2881A8411900025F928 /* Frameworks */,
+				3F05DEE91A98667C00E17782 /* MapKit.framework */,
 				3F5845141A66253E00FEDBB4 /* Tesla */,
-				3F58452C1A66253E00FEDBB4 /* TeslaTests */,
 				3F5845131A66253E00FEDBB4 /* Products */,
-				3FC2BB981A84752D004BB286 /* Tesla-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				3F5845121A66253E00FEDBB4 /* Tesla.app */,
-				3F5845291A66253E00FEDBB4 /* TeslaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +64,7 @@
 				3F5845191A66253E00FEDBB4 /* ViewController.swift */,
 				3F58451D1A66253E00FEDBB4 /* Main.storyboard */,
 				3F5845151A66253E00FEDBB4 /* Supporting Files */,
+				3F05DEEB1A98689E00E17782 /* Storyboard2.storyboard */,
 			);
 			path = Tesla;
 			sourceTree = "<group>";
@@ -140,45 +77,6 @@
 				3F5845161A66253E00FEDBB4 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3F58452C1A66253E00FEDBB4 /* TeslaTests */ = {
-			isa = PBXGroup;
-			children = (
-				3F58452F1A66253E00FEDBB4 /* TeslaTests.swift */,
-				3F58452D1A66253E00FEDBB4 /* Supporting Files */,
-			);
-			path = TeslaTests;
-			sourceTree = "<group>";
-		};
-		3F58452D1A66253E00FEDBB4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3F58452E1A66253E00FEDBB4 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3F79B2881A8411900025F928 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3FC2BB9D1A84780E004BB286 /* GoogleMaps.bundle */,
-				3F79B2861A8410F20025F928 /* SystemConfiguration.framework */,
-				3F79B2841A8410EB0025F928 /* QuartzCore.framework */,
-				3F79B2821A8410E60025F928 /* OpenGLES.framework */,
-				3F79B2801A8410DF0025F928 /* libz.dylib */,
-				3F79B27E1A8410D80025F928 /* libicucore.dylib */,
-				3F79B27C1A8410CA0025F928 /* libc++.dylib */,
-				3F79B27A1A8410C20025F928 /* ImageIO.framework */,
-				3F79B2781A8410BC0025F928 /* GLKit.framework */,
-				3F79B2761A8410B60025F928 /* CoreText.framework */,
-				3F79B2741A8410B10025F928 /* CoreLocation.framework */,
-				3F79B2721A8410AB0025F928 /* CoreData.framework */,
-				3F79B2701A8410A10025F928 /* AdSupport.framework */,
-				3F79B26E1A84108E0025F928 /* AVFoundation.framework */,
-				3F79B26C1A840FE30025F928 /* GoogleMaps.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,24 +99,6 @@
 			productReference = 3F5845121A66253E00FEDBB4 /* Tesla.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3F5845281A66253E00FEDBB4 /* TeslaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3F5845361A66253E00FEDBB4 /* Build configuration list for PBXNativeTarget "TeslaTests" */;
-			buildPhases = (
-				3F5845251A66253E00FEDBB4 /* Sources */,
-				3F5845261A66253E00FEDBB4 /* Frameworks */,
-				3F5845271A66253E00FEDBB4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3F58452B1A66253E00FEDBB4 /* PBXTargetDependency */,
-			);
-			name = TeslaTests;
-			productName = TeslaTests;
-			productReference = 3F5845291A66253E00FEDBB4 /* TeslaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -236,7 +116,7 @@
 								enabled = 0;
 							};
 							com.apple.Maps.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.OMC = {
 								enabled = 0;
@@ -245,10 +125,6 @@
 								enabled = 0;
 							};
 						};
-					};
-					3F5845281A66253E00FEDBB4 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 3F5845111A66253E00FEDBB4;
 					};
 				};
 			};
@@ -266,7 +142,6 @@
 			projectRoot = "";
 			targets = (
 				3F5845111A66253E00FEDBB4 /* Tesla */,
-				3F5845281A66253E00FEDBB4 /* TeslaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,17 +151,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F05DEEC1A98689E00E17782 /* Storyboard2.storyboard in Resources */,
 				3F58451F1A66253E00FEDBB4 /* Main.storyboard in Resources */,
 				3F5845241A66253E00FEDBB4 /* LaunchScreen.xib in Resources */,
 				3F5845211A66253E00FEDBB4 /* Images.xcassets in Resources */,
-				3FC2BB9E1A84780E004BB286 /* GoogleMaps.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F5845271A66253E00FEDBB4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,23 +170,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F5845251A66253E00FEDBB4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F5845301A66253E00FEDBB4 /* TeslaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3F58452B1A66253E00FEDBB4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3F5845111A66253E00FEDBB4 /* Tesla */;
-			targetProxy = 3F58452A1A66253E00FEDBB4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3F58451D1A66253E00FEDBB4 /* Main.storyboard */ = {
@@ -434,8 +286,9 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tesla-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -456,41 +309,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Tesla-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		3F5845371A66253E00FEDBB4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TeslaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tesla.app/Tesla";
-			};
-			name = Debug;
-		};
-		3F5845381A66253E00FEDBB4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TeslaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tesla.app/Tesla";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -511,15 +331,6 @@
 			buildConfigurations = (
 				3F5845341A66253E00FEDBB4 /* Debug */,
 				3F5845351A66253E00FEDBB4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3F5845361A66253E00FEDBB4 /* Build configuration list for PBXNativeTarget "TeslaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F5845371A66253E00FEDBB4 /* Debug */,
-				3F5845381A66253E00FEDBB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
