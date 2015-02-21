@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import MapKit
 import CoreLocation
+import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -20,6 +20,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.requestWhenInUseAuthorization()
+        }
         
         var p1 = MKPointAnnotation()
         var p2 = MKPointAnnotation()
@@ -51,6 +56,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         directions.calculateDirectionsWithCompletionHandler { (response: MKDirectionsResponse!, error: NSError!) -> Void in
             if error == nil {
                 self.route = response.routes[0] as? MKRoute
+           
                 self.mapView.addOverlay(self.route?.polyline)
             } else {
                 println("error")
@@ -69,19 +75,40 @@ class ViewController: UIViewController, MKMapViewDelegate {
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .AuthorizedWhenInUse {
             locationManager.startUpdatingLocation()
-            
-    
+        }
+        
+        print("The authorization status of location services is changed to: ")
+        switch CLLocationManager.authorizationStatus(){
+        case .Authorized:
+            println("Authorized")
+        case .AuthorizedWhenInUse:
+            println("Authorized when in use")
+        case .Denied:
+            println("Denied")
+        case .NotDetermined:
+            println("Not determined")
+        case .Restricted:
+            println("Restricted")
+        default:
+            println("Unhandled")
         }
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if let location = locations.first as? CLLocation {
             locationManager.stopUpdatingLocation()
-            
-           
         }
     }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!){
+            println("Latitude = \(newLocation.coordinate.latitude)")
+            println("Longitude = \(newLocation.coordinate.longitude)")
+    }
 
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!){
+        println("Location manager failed with error = \(error)")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
