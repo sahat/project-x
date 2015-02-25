@@ -11,7 +11,7 @@ import Foundation
 struct Supercharger {
     let location: String
     let address: String
-    let description: String
+    let description: String?
     let state: String
     let country: String
     let latitude: Double

@@ -18,6 +18,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     var route: MKRoute?
     
+    let superchargers = [
+        Supercharger(location: "Freemont", address: "45500 Fremont Blvd, Fremont, CA 94538 - Tesla Factory", description: nil, state: "CA", country: "United States", latitude: 37.49267, longitude: -121.94409, slots: 8, rate: 120)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,8 +44,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.addAnnotation(p2)
         
         mapView.delegate = self
-        
-        mapView.setRegion(MKCoordinateRegionMake(p2.coordinate, MKCoordinateSpanMake(0.7,0.7)), animated: true)
+        mapView.showsUserLocation = true
         
         var directionsRequest = MKDirectionsRequest()
         
@@ -72,13 +75,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         return myLineRenderer
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-        var pinView = MKAnnotationView()
-        pinView.annotation = annotation
-        pinView.image = UIImage(named:"icon-supercharger")
-        pinView.canShowCallout = true
-        return pinView
-    }
+//    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+//        var pinView = MKAnnotationView()
+//        pinView.annotation = annotation
+//        pinView.image = UIImage(named:"icon-supercharger")
+//        pinView.canShowCallout = true
+//        return pinView
+//    }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .AuthorizedWhenInUse {
@@ -102,9 +105,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
+    // Received current location
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if let location = locations.first as? CLLocation {
             locationManager.stopUpdatingLocation()
+            
+            mapView.setRegion(MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.7,0.7)), animated: true)
         }
     }
     
