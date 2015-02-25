@@ -67,9 +67,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         var myLineRenderer = MKPolylineRenderer(polyline: route?.polyline)
-        myLineRenderer.strokeColor = UIColor(red: 0, green: 0, blue: 255, alpha: 0.6)
-        myLineRenderer.lineWidth = 5
+        myLineRenderer.strokeColor = UIColor(red: 0, green: 0, blue: 255, alpha: 0.8)
+        myLineRenderer.lineWidth = 4
         return myLineRenderer
+    }
+    
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        var pinView = MKAnnotationView()
+        pinView.annotation = annotation
+        pinView.image = UIImage(named:"icon-supercharger")
+        pinView.canShowCallout = true
+        return pinView
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
