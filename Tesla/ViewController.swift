@@ -30,6 +30,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             locationManager.requestWhenInUseAuthorization()
         }
         
+        for sc in superchargers {
+            var pin = MKPointAnnotation()
+            pin.coordinate = CLLocationCoordinate2DMake(sc.latitude, sc.longitude)
+            pin.title = sc.location
+            pin.subtitle = sc.address
+            mapView.addAnnotation(pin)
+        }
+        
         var p1 = MKPointAnnotation()
         var p2 = MKPointAnnotation()
         
@@ -75,13 +83,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         return myLineRenderer
     }
     
-//    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-//        var pinView = MKAnnotationView()
-//        pinView.annotation = annotation
-//        pinView.image = UIImage(named:"icon-supercharger")
-//        pinView.canShowCallout = true
-//        return pinView
-//    }
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        if (annotation is MKUserLocation) {
+            return nil
+        }
+        
+        var pinView = MKAnnotationView()
+        pinView.annotation = annotation
+        pinView.image = UIImage(named:"icon-supercharger")
+        pinView.canShowCallout = true
+        return pinView
+    }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .AuthorizedWhenInUse {
@@ -105,16 +117,15 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
-    // Received current location
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if let location = locations.first as? CLLocation {
             locationManager.stopUpdatingLocation()
-            
-            mapView.setRegion(MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.7,0.7)), animated: true)
+            var currentLocationRegion = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpanMake(0.5,0.5))
+            mapView.setRegion(currentLocationRegion, animated: true)
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!){
+    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
             println("Latitude = \(newLocation.coordinate.latitude)")
             println("Longitude = \(newLocation.coordinate.longitude)")
     }
