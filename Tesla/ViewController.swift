@@ -58,25 +58,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.delegate = self
         mapView.showsUserLocation = true
         
-        var directionsRequest = MKDirectionsRequest()
-        
-        let markTaipei = MKPlacemark(coordinate: CLLocationCoordinate2DMake(p1.coordinate.latitude, p1.coordinate.longitude), addressDictionary: nil)
-        let markChungli = MKPlacemark(coordinate: CLLocationCoordinate2DMake(p2.coordinate.latitude, p2.coordinate.longitude), addressDictionary: nil)
-        
-        directionsRequest.setSource(MKMapItem(placemark: markChungli))
-        directionsRequest.setDestination(MKMapItem(placemark: markTaipei))
-        directionsRequest.transportType = MKDirectionsTransportType.Automobile
-        
-        var directions = MKDirections(request: directionsRequest)
-        directions.calculateDirectionsWithCompletionHandler { (response: MKDirectionsResponse!, error: NSError!) -> Void in
-            if error == nil {
-                self.route = response.routes[0] as? MKRoute
-           
-                self.mapView.addOverlay(self.route?.polyline)
-            } else {
-                println("error")
-            }
-        }
         
     }
     
@@ -106,6 +87,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func calloutButtonPressed(sender: UIButton) {
         println("HIII")
+        
+    
+  
+        println(locationManager.location.coordinate.latitude)
     }
     
 //    func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
@@ -115,6 +100,41 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         println("I tapped it \(view.annotation.title)")
+        
+        var directionsRequest = MKDirectionsRequest()
+    
+        let currentLocation = MKPlacemark(coordinate: locationManager.location.coordinate, addressDictionary: nil)
+        let superchargerLocation = MKPlacemark(coordinate: CLLocationCoordinate2DMake(37.49267, -121.94409), addressDictionary: nil)
+        
+        directionsRequest.setSource(MKMapItem.mapItemForCurrentLocation())
+        directionsRequest.setDestination(MKMapItem(placemark: superchargerLocation))
+        directionsRequest.transportType = MKDirectionsTransportType.Automobile
+        
+        var directions = MKDirections(request: directionsRequest)
+        directions.calculateDirectionsWithCompletionHandler { (response: MKDirectionsResponse!, error: NSError!) -> Void in
+            if error == nil {
+                self.route = response.routes[0] as? MKRoute
+                
+                self.mapView.addOverlay(self.route?.polyline)
+            } else {
+                println("error")
+            }
+        }
+
+        
+//        if let supercharger = find(superchargers, "Freemont") {
+//            println(supercharger)
+//        }
+        
+//        var geocoder = CLGeocoder()
+//        geocoder.geocodeAddressString(view.annotation.subtitle, {(placemarks: [AnyObject]!, error: NSError!) -> Void in
+//            if let placemark = placemarks?[0] as? CLPlacemark {
+//                var a = MKPlacemark(placemark: placemark)
+//                println(a.location)
+//                self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
+//            }
+//        })
+        
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
