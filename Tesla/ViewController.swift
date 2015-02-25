@@ -19,7 +19,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var route: MKRoute?
     
     let superchargers = [
-        Supercharger(location: "Freemont", address: "45500 Fremont Blvd, Fremont, CA 94538 - Tesla Factory", description: nil, state: "CA", country: "United States", latitude: 37.49267, longitude: -121.94409, slots: 8, rate: 120)
+        Supercharger(location: "Freemont", address: "45500 Fremont Blvd, Fremont, CA 94538 - Tesla Factory", description: nil, state: "CA", country: "United States", latitude: 37.49267, longitude: -121.94409, slots: 8, rate: 120),
+        Supercharger(location: "Folsom", address: "13000 Folsom Blvd, Folsom, CA 95630 - Folsom Boulevard Exit 23 - Folsom Premium Outlets", description: nil, state: "CA", country: "United States", latitude: 38.64392, longitude: -121.18621, slots: 4, rate: 0),
+        Supercharger(location: "Gilroy", address: "681 Leavesley Rd, Gilroy, CA 95020 - 101 at Leavesley Road - Gilroy Premium Outlets - Near Sony", description: nil, state: "CA", country: "United States", latitude: 37.02615, longitude: -121.56487, slots: 10, rate: 120),
+        Supercharger(location: "Harris Ranch", address: "I-5 Exit 334, Harris Ranch Inn and Restaurant 24505 W. Dorris Ave Coalinga, CA 93210", description: nil, state: "CA", country: "United States", latitude: 36.25316, longitude: -120.23853, slots: 7, rate: 120)
     ]
     
     override func viewDidLoad() {
