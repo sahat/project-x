@@ -94,9 +94,27 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         var pinView = MKAnnotationView()
         pinView.annotation = annotation
-        pinView.image = UIImage(named:"icon-supercharger")
+        pinView.image = UIImage(named: "icon-supercharger")
         pinView.canShowCallout = true
+   
+        let calloutButton = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as UIButton
+        calloutButton.addTarget(self, action: "calloutButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        pinView.rightCalloutAccessoryView = calloutButton
+        
         return pinView
+    }
+    
+    func calloutButtonPressed(sender: UIButton) {
+        println("HIII")
+    }
+    
+//    func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+//        UITapGestureRecognizer(target: <#AnyObject#>, action: <#Selector#>)
+//        println("Touched annotation")
+//    }
+    
+    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
+        println("I tapped it \(view.annotation.title)")
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
