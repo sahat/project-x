@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Sahat Yalkabov. All rights reserved.
 //
 
+import Darwin
 import UIKit
 import CoreLocation
 import MapKit
@@ -125,6 +126,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             locationManager.stopUpdatingLocation()
             var currentLocationRegion = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpanMake(0.5,0.5))
             mapView.setRegion(currentLocationRegion, animated: true)
+            
+            
+            for sc in superchargers {
+                var start = location.coordinate
+                var end = CLLocationCoordinate2DMake(sc.latitude, sc.longitude)
+                var d = harvesineDistance(start, end: end)
+                println("I am \(d) miles away from supercharger in \(sc.location)")
+            }
         }
     }
     
@@ -135,6 +144,23 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!){
         println("Location manager failed with error = \(error)")
+    }
+    
+    func harvesineDistance(start: CLLocationCoordinate2D, end: CLLocationCoordinate2D) -> Double {
+        var R = 6371;
+        var dLat = DegreesToRadians(end.latitude - start.latitude)
+        var dLon = DegreesToRadians(end.longitude - start.longitude)
+        var lat1 = DegreesToRadians(start.latitude)
+        var lat2 = DegreesToRadians(end.latitude)
+        
+        var a = sin(dLat / 2) * sin(dLat / 2) + sin(dLon / 2) * sin(dLon / 2) * cos(lat1) * cos(lat2);
+        var c = 2 * atan2(sqrt(a), sqrt(1 - a));
+
+        return Double(R) * c;
+    }
+    
+    func DegreesToRadians (value: Double) -> Double {
+        return value * M_PI / 180.0
     }
     
     override func didReceiveMemoryWarning() {
