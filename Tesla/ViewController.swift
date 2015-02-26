@@ -101,25 +101,29 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         println("I tapped it \(view.annotation.title)")
         
-        var directionsRequest = MKDirectionsRequest()
-    
-        let currentLocation = MKPlacemark(coordinate: locationManager.location.coordinate, addressDictionary: nil)
-        let superchargerLocation = MKPlacemark(coordinate: CLLocationCoordinate2DMake(37.49267, -121.94409), addressDictionary: nil)
-        
-        directionsRequest.setSource(MKMapItem.mapItemForCurrentLocation())
-        directionsRequest.setDestination(MKMapItem(placemark: superchargerLocation))
-        directionsRequest.transportType = MKDirectionsTransportType.Automobile
-        
-        var directions = MKDirections(request: directionsRequest)
-        directions.calculateDirectionsWithCompletionHandler { (response: MKDirectionsResponse!, error: NSError!) -> Void in
-            if error == nil {
-                self.route = response.routes[0] as? MKRoute
-                
-                self.mapView.addOverlay(self.route?.polyline)
-            } else {
-                println("error")
+        if let found = find(superchargers.map({ $0.location }), view.annotation.title!) {
+            let supercharger = superchargers[found]
+            let superchargerLocation = MKPlacemark(coordinate: CLLocationCoordinate2DMake(supercharger.latitude, supercharger.longitude), addressDictionary: nil)
+            
+            var directionsRequest = MKDirectionsRequest()
+            directionsRequest.setSource(MKMapItem.mapItemForCurrentLocation())
+            directionsRequest.setDestination(MKMapItem(placemark: superchargerLocation))
+            directionsRequest.transportType = MKDirectionsTransportType.Automobile
+            
+            var directions = MKDirections(request: directionsRequest)
+            directions.calculateDirectionsWithCompletionHandler { (response: MKDirectionsResponse!, error: NSError!) -> Void in
+                if error == nil {
+                    self.route = response.routes[0] as? MKRoute
+                    
+                    self.mapView.addOverlay(self.route?.polyline)
+                } else {
+                    println("error")
+                }
             }
         }
+
+        
+        
 
         
 //        if let supercharger = find(superchargers, "Freemont") {
