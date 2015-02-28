@@ -113,8 +113,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             var directions = MKDirections(request: directionsRequest)
             directions.calculateDirectionsWithCompletionHandler { (response: MKDirectionsResponse!, error: NSError!) -> Void in
                 if error == nil {
+                    self.mapView.removeOverlays(self.mapView.overlays)
                     self.route = response.routes[0] as? MKRoute
-                    
                     self.mapView.addOverlay(self.route?.polyline)
                 } else {
                     println("error")
