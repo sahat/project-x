@@ -106,9 +106,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let superchargerLocation = MKPlacemark(coordinate: CLLocationCoordinate2DMake(supercharger.latitude, supercharger.longitude), addressDictionary: nil)
             
             var directionsRequest = MKDirectionsRequest()
+            directionsRequest.transportType = MKDirectionsTransportType.Automobile
             directionsRequest.setSource(MKMapItem.mapItemForCurrentLocation())
             directionsRequest.setDestination(MKMapItem(placemark: superchargerLocation))
-            directionsRequest.transportType = MKDirectionsTransportType.Automobile
             
             var directions = MKDirections(request: directionsRequest)
             directions.calculateDirectionsWithCompletionHandler { (response: MKDirectionsResponse!, error: NSError!) -> Void in
@@ -116,6 +116,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                     self.mapView.removeOverlays(self.mapView.overlays)
                     self.route = response.routes[0] as? MKRoute
                     self.mapView.addOverlay(self.route?.polyline)
+                    
+                    println(self.route?.expectedTravelTime)
+                    println(self.route?.distance)
+
+                    for step in self.route!.steps as [MKRouteStep] {
+//                        println(step.polyline.coordinate.latitude, step.polyline.coordinate.longitude)
+                    }
+                    
                 } else {
                     println("error")
                 }
