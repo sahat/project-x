@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gt1-Xz-aw2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,22 +20,66 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ICC-DD-p59">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-xA-OAJ">
+                                <rect key="frame" x="6" y="25" width="588" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="UbF-6K-Wq0"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="ehJ-vo-Aeo" kind="embed" id="kqs-PU-0B4"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ICC-DD-p59" secondAttribute="trailing" id="OPm-aZ-x3H"/>
-                            <constraint firstItem="ICC-DD-p59" firstAttribute="leading" secondItem="6Te-aK-Zth" secondAttribute="leading" id="biv-in-U7T"/>
-                            <constraint firstItem="ICC-DD-p59" firstAttribute="top" secondItem="6Te-aK-Zth" secondAttribute="top" id="gxM-MQ-jdp"/>
-                            <constraint firstItem="ICC-DD-p59" firstAttribute="bottom" secondItem="uXE-If-ZPm" secondAttribute="top" id="mk4-3a-rW2"/>
+                            <constraint firstItem="ICC-DD-p59" firstAttribute="top" secondItem="6Te-aK-Zth" secondAttribute="top" id="08S-CY-Rof"/>
+                            <constraint firstItem="QaG-xA-OAJ" firstAttribute="top" secondItem="ZRS-MU-frk" secondAttribute="bottom" constant="5" id="DQg-Du-ZIE"/>
+                            <constraint firstItem="ICC-DD-p59" firstAttribute="leading" secondItem="6Te-aK-Zth" secondAttribute="leading" id="Dsf-te-kRl"/>
+                            <constraint firstAttribute="trailing" secondItem="ICC-DD-p59" secondAttribute="trailing" id="ULA-1i-0K7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QaG-xA-OAJ" secondAttribute="trailing" constant="-10" id="kJZ-a4-cUk"/>
+                            <constraint firstItem="ICC-DD-p59" firstAttribute="bottom" secondItem="uXE-If-ZPm" secondAttribute="top" id="tOZ-VA-ncp"/>
+                            <constraint firstItem="QaG-xA-OAJ" firstAttribute="leading" secondItem="6Te-aK-Zth" secondAttribute="leadingMargin" constant="-10" id="wqY-Uu-VZm"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="NavigationBar" destination="QaG-xA-OAJ" id="guE-32-bej"/>
                         <outlet property="mapView" destination="ICC-DD-p59" id="dSr-1Y-3TD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGd-dR-GsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1012" y="-70"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="47j-tI-pDE">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ehJ-vo-Aeo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ub-1S-wRX"/>
+                        <viewControllerLayoutGuide type="bottom" id="esm-1w-weI"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fRQ-6b-Jym">
+                        <rect key="frame" x="0.0" y="0.0" width="588" height="45"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Get Directions" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cz0-ud-eJ5">
+                                <rect key="frame" x="16" y="16" width="556" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cz0-ud-eJ5" firstAttribute="leading" secondItem="fRQ-6b-Jym" secondAttribute="leadingMargin" id="bIT-kB-1UF"/>
+                            <constraint firstItem="cz0-ud-eJ5" firstAttribute="trailing" secondItem="fRQ-6b-Jym" secondAttribute="trailingMargin" id="cfg-ai-H5m"/>
+                            <constraint firstItem="cz0-ud-eJ5" firstAttribute="centerY" secondItem="fRQ-6b-Jym" secondAttribute="centerY" id="lBL-ak-m84"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5L-le-T6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="-527"/>
         </scene>
     </scenes>
 </document>

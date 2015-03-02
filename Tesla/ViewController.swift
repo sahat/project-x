@@ -13,6 +13,8 @@ import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+    @IBOutlet weak var NavigationBar: UIView!
+
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
@@ -28,6 +30,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        NavigationBar.layer.shadowColor = UIColor.blackColor().CGColor
+        NavigationBar.layer.shadowOffset = CGSizeMake(0, 2.0)
+        NavigationBar.layer.shadowRadius = 3
+        NavigationBar.layer.shadowOpacity = 0.2
+        
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
