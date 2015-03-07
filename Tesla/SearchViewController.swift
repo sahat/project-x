@@ -15,8 +15,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        println("HI FROM NAVBAR")
+
         searchTextField.delegate = self
     }
 
@@ -25,7 +24,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        println("BOOM")
-        return false
+        println(textField.text)
+        searchTextField.resignFirstResponder()
+        return true
     }
 }
