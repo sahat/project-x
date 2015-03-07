@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="1012" y="-70"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="47j-tI-pDE">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ehJ-vo-Aeo" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ehJ-vo-Aeo" customClass="SearchViewController" customModule="Tesla" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8ub-1S-wRX"/>
                         <viewControllerLayoutGuide type="bottom" id="esm-1w-weI"/>
@@ -62,7 +62,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="588" height="45"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Get Directions" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cz0-ud-eJ5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Get Directions" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cz0-ud-eJ5">
                                 <rect key="frame" x="16" y="16" width="556" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -70,16 +70,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cz0-ud-eJ5" firstAttribute="leading" secondItem="fRQ-6b-Jym" secondAttribute="leadingMargin" id="bIT-kB-1UF"/>
-                            <constraint firstItem="cz0-ud-eJ5" firstAttribute="trailing" secondItem="fRQ-6b-Jym" secondAttribute="trailingMargin" id="cfg-ai-H5m"/>
-                            <constraint firstItem="cz0-ud-eJ5" firstAttribute="centerY" secondItem="fRQ-6b-Jym" secondAttribute="centerY" id="lBL-ak-m84"/>
+                            <constraint firstItem="cz0-ud-eJ5" firstAttribute="leading" secondItem="fRQ-6b-Jym" secondAttribute="leadingMargin" id="Q4C-1p-t9r"/>
+                            <constraint firstItem="esm-1w-weI" firstAttribute="top" secondItem="cz0-ud-eJ5" secondAttribute="bottom" constant="12" id="QYT-Bv-ebi"/>
+                            <constraint firstItem="cz0-ud-eJ5" firstAttribute="top" secondItem="8ub-1S-wRX" secondAttribute="bottom" constant="16" id="ZfT-lM-1Mz"/>
+                            <constraint firstItem="cz0-ud-eJ5" firstAttribute="trailing" secondItem="fRQ-6b-Jym" secondAttribute="trailingMargin" id="v5a-kf-lKA"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="searchTextField" destination="cz0-ud-eJ5" id="9gx-Bo-ckx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t5L-le-T6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="-527"/>
+            <point key="canvasLocation" x="1720" y="-347.5"/>
         </scene>
     </scenes>
 </document>

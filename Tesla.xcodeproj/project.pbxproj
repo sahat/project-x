@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F05DEEA1A98667C00E17782 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F05DEE91A98667C00E17782 /* MapKit.framework */; };
 		3F05DEEC1A98689E00E17782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F05DEEB1A98689E00E17782 /* Main.storyboard */; };
+		3F2E46AD1AAAC43F008E949A /* GooglePlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E46AC1AAAC43F008E949A /* GooglePlaces.swift */; };
+		3F2E46AF1AAAC8B4008E949A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E46AE1AAAC8B4008E949A /* SearchViewController.swift */; };
 		3F5845181A66253E00FEDBB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5845171A66253E00FEDBB4 /* AppDelegate.swift */; };
 		3F58451A1A66253E00FEDBB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5845191A66253E00FEDBB4 /* ViewController.swift */; };
 		3F5845211A66253E00FEDBB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5845201A66253E00FEDBB4 /* Images.xcassets */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		3F05DEE91A98667C00E17782 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3F05DEEB1A98689E00E17782 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3F2E46AC1AAAC43F008E949A /* GooglePlaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlaces.swift; sourceTree = "<group>"; };
+		3F2E46AE1AAAC8B4008E949A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3F5845121A66253E00FEDBB4 /* Tesla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5845161A66253E00FEDBB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F5845171A66253E00FEDBB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,9 +72,11 @@
 		3F5845141A66253E00FEDBB4 /* Tesla */ = {
 			isa = PBXGroup;
 			children = (
+				3F2E46AC1AAAC43F008E949A /* GooglePlaces.swift */,
 				3F05DEEB1A98689E00E17782 /* Main.storyboard */,
 				3F5845171A66253E00FEDBB4 /* AppDelegate.swift */,
 				3F5845191A66253E00FEDBB4 /* ViewController.swift */,
+				3F2E46AE1AAAC8B4008E949A /* SearchViewController.swift */,
 				3FAC1BAD1A9D58BF009FFFCC /* Supercharger.swift */,
 				3F5845151A66253E00FEDBB4 /* Supporting Files */,
 			);
@@ -174,6 +180,8 @@
 			files = (
 				3F5845181A66253E00FEDBB4 /* AppDelegate.swift in Sources */,
 				3F58451A1A66253E00FEDBB4 /* ViewController.swift in Sources */,
+				3F2E46AF1AAAC8B4008E949A /* SearchViewController.swift in Sources */,
+				3F2E46AD1AAAC43F008E949A /* GooglePlaces.swift in Sources */,
 				3FAC1BAE1A9D58BF009FFFCC /* Supercharger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

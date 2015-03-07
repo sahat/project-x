@@ -12,9 +12,7 @@ import CoreLocation
 import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-    
     @IBOutlet weak var NavigationBar: UIView!
-
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
@@ -27,6 +25,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         Supercharger(location: "Gilroy", address: "681 Leavesley Rd, Gilroy, CA 95020 - 101 at Leavesley Road - Gilroy Premium Outlets - Near Sony", description: nil, state: "CA", country: "United States", latitude: 37.02615, longitude: -121.56487, slots: 10, rate: 120),
         Supercharger(location: "Harris Ranch", address: "I-5 Exit 334, Harris Ranch Inn and Restaurant 24505 W. Dorris Ave Coalinga, CA 93210", description: nil, state: "CA", country: "United States", latitude: 36.25316, longitude: -120.23853, slots: 7, rate: 120)
     ]
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -204,6 +204,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!){
         println("Location manager failed with error = \(error)")
     }
+    
+    
     
     func harvesineDistance(start: CLLocationCoordinate2D, end: CLLocationCoordinate2D) -> Double {
         var R = 6371;
